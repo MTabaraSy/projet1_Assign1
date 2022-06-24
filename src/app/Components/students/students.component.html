@@ -1,0 +1,26 @@
+<div class="formClass">
+    
+
+    <form class="col-sm-23">
+        <div class="form-group">
+            <div class="label">Nom et prénom de l'élève</div>
+            <input type="text" name="nom" class="form-control" [(ngModel)]="NomPrenom">
+        </div>
+        <div class="form-group">
+            <div class="label">Classe</div>
+            <select name="taskStatus" class="form-control" [(ngModel)] = "Classe"  >
+              <option *ngFor="let classe of Classe" [value]='classe'>{{classe.nom}}</option>
+             
+            </select>
+        </div>
+        
+        <div><button (click)="addStudent" class="btn btn-success">Ajouter</button> 
+            <!-- <button (click)=""></button> -->
+        </div>
+
+        
+       
+        
+
+    </form>
+</div>

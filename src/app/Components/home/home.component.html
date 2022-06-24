@@ -1,0 +1,25 @@
+<div class="mat-elevation-z8">
+<table  class="table table-striped">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Nom de la classe</td>
+      <td>Nombre d'élèves</td>
+      <td>Professeur Responsable</td>
+      <td>Modifier</td>
+      <td>Supprimer</td>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let classe of Classe">
+      <td>{{classe.id}}</td>
+      <td class="cliquer" (click)="filtre(classe.nom)" >{{classe.nom}}</td>
+      <td>{{classe.nmbreMax}}</td>
+      <td>{{classe.professeurResponsabl}}</td>
+      <td><button (click)="update(classe.id)" class="btn btn-primary">Modifier</button></td>
+       <td><button (click)="delete(classe.id)" class = "btn btn-danger">Supprimer</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
